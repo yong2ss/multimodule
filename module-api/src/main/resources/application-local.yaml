@@ -1,3 +1,5 @@
+profile-name : local
+
 spring:
   main:
     allow-bean-definition-overriding: true

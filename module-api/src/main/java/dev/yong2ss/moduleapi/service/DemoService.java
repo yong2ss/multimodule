@@ -7,6 +7,7 @@ import dev.yong2ss.modulecommon.repository.MemberRepository;
 import dev.yong2ss.modulecommon.service.CommonService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -14,7 +15,10 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class DemoService {
 
-    private final CommonService commonService;
+    @Value("${profile-name}")
+    private String name;
+    //active profile도 설정
+
     private final MemberRepository memberRepository;
 
     public String save() {
