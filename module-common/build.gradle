@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.8'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'java-library'
 }
 
 group = 'dev.yong2ss'
@@ -23,6 +24,9 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation 'mysql:mysql-connector-java:8.0.28'
+	api 'org.springframework.boot:spring-boot-starter-data-jpa'
 }
 
 tasks.named('test') {
